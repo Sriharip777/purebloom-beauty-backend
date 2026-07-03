@@ -14,6 +14,7 @@ const analyticsRoutes = require('./routes/analytics.routes');
 const subscriberRoutes = require('./routes/subscriber.routes');
 const whatsappRoutes = require('./routes/whatsapp.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const amazonRoutes = require('./routes/amazon.routes');
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use('/api/analytics', analyticsRoutes);
 app.use('/api/subscribers', subscriberRoutes);
 app.use('/api/whatsapp', whatsappRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/amazon', amazonRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'PureBloom Beauty API is running', timestamp: new Date().toISOString() });
