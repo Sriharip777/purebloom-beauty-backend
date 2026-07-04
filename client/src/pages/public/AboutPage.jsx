@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ImageSlider3D from '../../components/common/ImageSlider3D';
+import mybrandImg from '../../assets/images/mybrand.png';
 
 export default function AboutPage() {
   return (
@@ -12,8 +13,8 @@ export default function AboutPage() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl dark:shadow-2xl dark:shadow-black/30">
-              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800" alt="PureBloom Beauty" className="w-full h-full object-cover" />
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl dark:shadow-2xl dark:shadow-black/30 group">
+              <img src={mybrandImg} alt="PureBloom Beauty" className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:saturate-0 group-hover:scale-105" />
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
